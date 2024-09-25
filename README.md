@@ -1,6 +1,6 @@
 # bni_coding_challange
 
-BNI Code Challange
+BNI Code Challange By Wasiman, S.T
 
 ## Getting Started
 
