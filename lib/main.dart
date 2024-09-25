@@ -1,4 +1,5 @@
 import 'package:bni_coding_challange/app.dart';
+import 'package:bni_coding_challange/src/features/chart/presentation/bloc/chart_bloc.dart';
 import 'package:bni_coding_challange/src/features/home/presentation/bloc/home_bloc.dart';
 import 'package:bni_coding_challange/src/features/home/presentation/pages/bloc/home_page_bloc.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,9 @@ void main() async {
       BlocProvider<HomePageBloc>(
         create: (context) =>
             HomePageBloc(repository)..add(ConnectToWebSocket()),
+      ),
+      BlocProvider<ChartBloc>(
+        create: (context) => ChartBloc()..add(ChartDataInitial()),
       )
     ],
     child: const App(),

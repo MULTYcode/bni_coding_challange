@@ -1,3 +1,4 @@
+import 'package:bni_coding_challange/src/features/chart/presentation/bloc/chart_bloc.dart';
 import 'package:bni_coding_challange/src/features/home/presentation/bloc/home_bloc.dart';
 import 'package:bni_coding_challange/src/features/home/presentation/pages/bloc/home_page_bloc.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 
+import '../../../chart/models/chart_data.dart';
 import '../../../chart/presentation/pages/chart_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -59,6 +61,21 @@ class _HomePageState extends State<HomePage> {
             return ListView.builder(
                 itemBuilder: (_, index) => GestureDetector(
                       onTap: () {
+                        List<ChartData> data = [
+                          ChartData('Jan', 35),
+                          ChartData('Feb', 28),
+                          ChartData('Mar', 34),
+                          ChartData('Apr', 32),
+                          ChartData('May', 40),
+                          ChartData('Jun', 12),
+                          ChartData('Jul', 30),
+                          ChartData('Agu', 60),
+                          ChartData('Sept', 50),
+                          ChartData('Oct', 80),
+                          ChartData('Nov', 10),
+                          ChartData('Desc', 20),
+                        ];
+                        context.read<ChartBloc>().add(ChartDataEvent(data));
                         Navigator.push(
                             context,
                             MaterialPageRoute(
