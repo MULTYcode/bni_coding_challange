@@ -71,8 +71,8 @@ class ChartBloc extends Bloc<ChartEvent, ChartState> {
 
     on<ChartDataEvent>((event, emit) {
       emit(ChartLoading());
-      return emit(ChartLoaded(webViewController));
-      // return emit(ChartLoaded(event.data));
+      // return emit(ChartLoaded(webViewController));
+      return emit(ChartLoaded(event.data));
     });
   }
 }

@@ -26,25 +26,24 @@ class _ChartPageState extends State<ChartPage> {
               child: CircularProgressIndicator(),
             );
           } else if (state is ChartLoaded) {
-            return WebViewWidget(controller: state.data);
             // return WebViewWidget(
             //   controller: state.data,
             // );
-            // return SfCartesianChart(
-            //   primaryXAxis: const CategoryAxis(),
-            //   title: const ChartTitle(text: 'Stock Chart'),
-            //   legend: const Legend(isVisible: true),
-            //   tooltipBehavior: TooltipBehavior(enable: true),
-            //   series: <CartesianSeries<ChartData, String>>[
-            //     LineSeries<ChartData, String>(
-            //       dataSource: state.data,
-            //       xValueMapper: (ChartData data, _) => data.year,
-            //       yValueMapper: (ChartData data, _) => data.sales,
-            //       name: 'Sales',
-            //       dataLabelSettings: const DataLabelSettings(isVisible: true),
-            //     ),
-            //   ],
-            // );
+            return SfCartesianChart(
+              primaryXAxis: const CategoryAxis(),
+              title: const ChartTitle(text: 'Stock Chart'),
+              legend: const Legend(isVisible: true),
+              tooltipBehavior: TooltipBehavior(enable: true),
+              series: <CartesianSeries<ChartData, String>>[
+                LineSeries<ChartData, String>(
+                  dataSource: state.data,
+                  xValueMapper: (ChartData data, _) => data.year,
+                  yValueMapper: (ChartData data, _) => data.sales,
+                  name: 'Sales',
+                  dataLabelSettings: const DataLabelSettings(isVisible: true),
+                ),
+              ],
+            );
           } else {
             return const Center(child: Text('Something went wrong'));
           }
