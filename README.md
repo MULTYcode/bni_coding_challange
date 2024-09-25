@@ -1,16 +1,21 @@
 # bni_coding_challange
 
-A new Flutter project.
+BNI Code Challange
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Project strater kit untuk BNI Sekuritas 
 
-A few resources to get you started if this is your first Flutter project:
+Beberapa informasi terkait package yang digunakan:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [flutter_screenutil, digunakan untuk responsive devices](https://pub.dev/packages/flutter_screenutil)
+- [devices_preview, digunakan untuk simulasi beberapa jenis devices android maupun IOS](https://pub.dev/packages/device_preview)
+- [flutter_bloc, sebagai state management](https://pub.dev/packages/flutter_bloc)
+- [shared_preferences, sebagai media penyimpanan variabel data](https://pub.dev/packages/shared_preferences)
+- [web_socket_channel, sebagai library untuk membaca websocket](https://pub.dev/packages/web_socket_channel)
+- [intl, sebagai library untuk formater string](https://pub.dev/packages/intl)
+- [syncfusion_flutter_charts, sebagai library untuk menampilkan chart](https://pub.dev/packages/syncfusion_flutter_charts)
+- [webview_flutter, sebagai library untuk menampilkan template tradingview](https://pub.dev/packages/webview_flutter)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+Terimakasih
